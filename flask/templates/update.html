@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+   <body>
+   <link rel="stylesheet" href="static/style.css">
+      <h2 style = "text-align: center;">UPDATE BOOK DETAILS</h2>
+
+      {% for message in form.book_name.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+
+      <form method = post>
+        {{ form.hidden_tag() }}
+        <div>
+            <table>
+                 <tr>
+                    <td>{{ form.book_id.label }}</td>
+                    <td>{{ form.book_id }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.book_name.label }}</td>
+                    <td>{{ form.book_name }}</td>
+                </tr>
+                 <tr>
+                    <td>{{ form.author.label }}</td>
+                    <td>{{ form.author }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.publisher.label }}</td>
+                    <td>{{ form.publisher }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.page_no.label }}</td>
+                    <td>{{ form.page_no }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.submit }}</td>
+                </tr>
+            </table>
+        </div>
+      </form>
+   </body>
+</html>
